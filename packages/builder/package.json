@@ -1,0 +1,18 @@
+{
+  "name": "@app/builder",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "./builder.js",
+  "exports": {
+    ".": "./builder.js"
+  },
+  "bin": {
+    "app-build": "./app-build.js"
+  },
+  "dependencies": {
+    "esbuild": "0.24.2",
+    "tsup": "^8.3.6"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@app/api",
+  "version": "0.0.1",
+  "description": "api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "@app/source": "./src/index.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "@app/source": "./src/index.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "app-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@app/builder": "workspace:*",
+    "@app/typescript-config": "workspace:*",
+    "typescript": "^5.9.2"
+  }
+}
