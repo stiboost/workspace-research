@@ -27,3 +27,4 @@ export const createStore = (): Store => {
   }
 };
 
+export const TITLE = 'State Management for noobs';

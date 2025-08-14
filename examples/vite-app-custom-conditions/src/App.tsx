@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { createStore } from '@app/state';
+import { createStore, TITLE } from '@app/state';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
     }
 
     initializeStore();
-  }, [store]);
+  }, [store, count]);
 
   return (
     <>
@@ -33,6 +33,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <h1>{TITLE}</h1>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
