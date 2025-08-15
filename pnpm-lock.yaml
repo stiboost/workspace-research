@@ -104,22 +104,13 @@ importers:
     devDependencies:
       '@app/builder':
         specifier: workspace:*
-        version: link:../builder
+        version: link:../../tooling/builder
       '@app/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
-
-  packages/builder:
-    dependencies:
-      esbuild:
-        specifier: 0.24.2
-        version: 0.24.2
-      tsup:
-        specifier: ^8.3.6
-        version: 8.5.0(postcss@8.5.6)(typescript@5.9.2)
 
   packages/state:
     dependencies:
@@ -129,15 +120,24 @@ importers:
     devDependencies:
       '@app/builder':
         specifier: workspace:*
-        version: link:../builder
+        version: link:../../tooling/builder
       '@app/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
 
-  packages/typescript-config: {}
+  tooling/builder:
+    dependencies:
+      esbuild:
+        specifier: 0.24.2
+        version: 0.24.2
+      tsup:
+        specifier: ^8.3.6
+        version: 8.5.0(postcss@8.5.6)(typescript@5.9.2)
+
+  tooling/typescript-config: {}
 
 packages:
 
